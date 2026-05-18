@@ -1,4 +1,4 @@
-package com.saurabh.homepage;
+package com.sneha.homepage;
 
 import org.junit.Test;
 
