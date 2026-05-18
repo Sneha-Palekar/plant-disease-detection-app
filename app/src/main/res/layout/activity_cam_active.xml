@@ -1,173 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fade_gray"
-    tools:context="com.sneha.homepage.CamActive">
+    android:background="#f5f5f5">
 
+    <!-- Header -->
     <LinearLayout
+        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/dashboard_bg">
+        android:background="#4CAF50"
+        android:gravity="center">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="30dp"
-            android:text="@string/plant_disease_detection"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25sp"
+            android:text="@string/Dashboard_moto1"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
-
+    <!-- Image Preview Container -->
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/imageContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_height="350dp"
+        android:layout_below="@id/headerLayout"
+        android:layout_margin="16dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
         android:orientation="vertical">
-
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="311dp"
-            android:layout_gravity="center"
-            android:layout_height="292dp"
-            android:background="@drawable/insect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
             android:scaleType="fitCenter" />
 
     </LinearLayout>
 
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/demoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="#4CAF50"
+        android:padding="10dp"
+        android:text="Select an image to start"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <!-- Detected Label -->
+    <TextView
+        android:id="@+id/classified"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/demoText"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="DETECTED"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Result Text -->
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classified"
+        android:layout_margin="16dp"
+        android:background="#E8F5E9"
+        android:gravity="center"
+        android:minHeight="60dp"
+        android:padding="12dp"
+        android:text="No disease detected"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+
+    <!-- Bottom Buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="500dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/demoText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:lineSpacingMultiplier="0.9"
-            android:text="@string/scan_your_crop"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:background="@drawable/bottom_app_bar_bg"
-            android:textStyle="bold"
-            android:textSize="17sp"
-            android:visibility="gone"
-            tools:targetApi="o" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:layout_marginStart="5dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/classified"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/detected"
-            android:textStyle="bold"
-            android:textColor="@color/colorAccent"
-            android:textSize="19sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="550dp"
-        >
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="19sp"
-            android:clickable="true"
-            android:focusable="true"
-            android:lineSpacingMultiplier="0.9"
-            android:textAllCaps="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="600dp"
-        >
-
-
-        <TextView
-            android:id="@+id/click_here"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Click on disease name to know the cure of the disease"
-            android:textAllCaps="false"
-            android:background="@drawable/click_on_pest_bg"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="13sp"
-            android:textColor="@color/white_smoke"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="120dp"
-        android:layout_height="90dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="44dp"
-        android:gravity="bottom"
-        android:orientation="vertical">
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="60dp"
+            android:id="@+id/uploadButton"
+            android:layout_width="0dp"
             android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:background="@drawable/ic__671722_camera_icon"
-            android:backgroundTint="@color/white_smoke"
-            android:elevation="2dp"
-            android:gravity="bottom" />
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="#4CAF50"
+            android:text="GALLERY"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="#2196F3"
+            android:text="CAMERA"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="76dp"
-        android:layout_alignParentBottom="true">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="1dp"
-            android:background="@drawable/ic_cam_wave_bg" />
-    </LinearLayout>
-
-
-
 
 </RelativeLayout>

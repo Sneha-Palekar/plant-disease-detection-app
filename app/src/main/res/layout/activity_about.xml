@@ -39,32 +39,33 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="44dp"
-        android:layout_marginTop="4dp"
-        android:text="Anand Singh -- Developer"
+        android:layout_marginStart="48dp"
+        android:text="Sneha Palekar -- Developer"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.197" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="331dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
         android:layout_marginStart="48dp"
-        android:text="@string/saurabh_kumar_developer_role"
+        android:text="Vaishnavi Patki -- Developer"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.287" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -89,20 +90,6 @@
         app:layout_constraintVertical_bias="0.297"
         app:srcCompat="@drawable/boy_avatar" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="© 2022"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -121,15 +108,15 @@
         android:id="@+id/sk_git"
         android:layout_width="284dp"
         android:layout_height="43dp"
-        android:text="@string/Saurabh_Kumar"
+        android:text="Patki3"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.879" />
+        app:layout_constraintVertical_bias="0.872" />
 
     <ImageView
         android:layout_width="42dp"
@@ -144,17 +131,17 @@
 
     <TextView
         android:id="@+id/anand_git"
-        android:layout_width="317dp"
-        android:layout_height="36dp"
-        android:text="@string/Anand_Singh_techie"
+        android:layout_width="284dp"
+        android:layout_height="43dp"
+        android:text="Sneha-Palekar"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.765"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782" />
+        app:layout_constraintVertical_bias="0.779" />
 
     <ImageView
         android:layout_width="42dp"

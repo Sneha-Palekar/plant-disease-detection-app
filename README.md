@@ -1,44 +1,50 @@
-# Agro App - Application to detect the plant disease
+# 🌿 Plant Disease Detection App
 
-⚡️ A application design to detect the plant disease by using the plant leaf image.
+Android application that identifies plant diseases from leaf images using TensorFlow Lite and Firebase authentication.
 
+## 📱 Features
 
-![AgroApp](https://github.com/indskgit/Plant_Disease_And_Plant_Identification/assets/88468596/30544256-1fc2-4334-93af-469dd4adcefb)
+| Feature | Description |
+|---------|-------------|
+| 🔐 User Authentication | Login and registration using Firebase Email/Password |
+| 📸 Camera Detection | Capture leaf images using device camera |
+| 🖼️ Gallery Upload | Select images from device storage |
+| 🤖 AI Detection | TensorFlow Lite model for disease identification |
+| 👤 User Profile | Personal dashboard with history |
 
-- Landing Page
-<img src="https://user-images.githubusercontent.com/94180760/216771359-54fd7a91-3cd9-4aae-9be5-bde6762ddc31.jpg"  width="300" height="600">
+## 🛠️ Tech Stack
+Android (Java) + Firebase Auth + TensorFlow Lite + CameraX
 
-- Login Page
-<p><img src="https://user-images.githubusercontent.com/94180760/216771621-3edf101a-3f57-4306-95f4-a8f3a7857060.jpg" width="300" height="600">     <img src="https://user-images.githubusercontent.com/94180760/216771870-160018bc-1fc6-4307-8e1d-c27ee81d57f8.png" width="300" height="600"></p>
+| Technology | Purpose |
+|------------|---------|
+| Android Studio | Development Environment |
+| Java/XML | Frontend development |
+| Firebase Authentication | User login/signup |
+| TensorFlow Lite | On-device ML inference |
+| CameraX | Camera integration |
+| Kaggle | Model training |
+| Roboflow | Dataset preparation |
 
-- Main Page
-<img src="https://user-images.githubusercontent.com/94180760/216771939-080a71d6-7137-477c-a67f-4646f3698ac3.jpg" width="300" height="600">
+## 🧠 Model Training
 
-- Contact Us Page 
-<img src="https://user-images.githubusercontent.com/94180760/216772017-291eb40e-992b-42e0-a6ad-00bb28e0b0c1.jpg" width="300" height="600">
+- **Platform**: Kaggle Notebook
+- **Dataset**: Plant disease images from Roboflow
+- **Architecture**: MobileNetV2
+- **Output**: TensorFlow Lite (.tflite)
 
-- Profile Page 
-<img src="https://user-images.githubusercontent.com/94180760/216772046-1184710b-bd4e-45dc-8b48-293d4c0d9d86.jpg" width="300" height="600">
+## 🚀 How to Run
 
-- Detection Page
-<img src="https://user-images.githubusercontent.com/94180760/216772120-31c1efd9-d815-450a-be15-0e1ea09e5e54.jpg" width="300" height="600">
+### Prerequisites
+- Android Studio (Latest version)
+- Android device (API 21+)
+- USB cable
 
+### Steps
+```bash
+# Clone the repository
+git clone https://github.com/Sneha-Palekar/plant-disease-detection-app.git
 
-## Installations and setup
-
-- git clone `https://github.com/indskgit/Plant_Disease_And_Plant_Identification`
-- `install gradle`
-- `update the requied dependencies`
-- `Run the app in AVD/Physical Device.`
-
-
-TODO:
-
-1. Add more features
-2. Add detection for Weeds
-3. Results more accurate
-
-## Collaborators:
-
-- https://github.com/Anand-Singh-techie
-- https://github.com/indskgit
+# Open in Android Studio
+# Add google-services.json from Firebase Console
+# Connect your Android device
+# Click Run ▶️

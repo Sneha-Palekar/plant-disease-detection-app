@@ -56,17 +56,27 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "I am your Friend", Toast.LENGTH_SHORT).show()
         );
 
+        // Plant Disease Detection - WORKING
         plant_Disease.setOnClickListener(v -> {
             Intent i = new Intent(MainActivity.this, CamActive.class);
             startActivity(i);
         });
 
+        // Pest Detection - TEMPORARILY DISABLED with Toast message
         pest_Detection.setOnClickListener(v -> {
-            Intent pest = new Intent(MainActivity.this, pest_Detection.class);
-            startActivity(pest);
+            Toast.makeText(MainActivity.this,
+                    "🐛 Pest Detection\nFeature Coming Soon!\nWorking on Disease Detection first.",
+                    Toast.LENGTH_LONG).show();
+            // Commented out to prevent crashes:
+            // Intent pest = new Intent(MainActivity.this, pest_Detection.class);
+            // startActivity(pest);
         });
 
+        // Soil Detection - Redirect to Disease Detection for now
         soilDetection.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this,
+                    "🌱 Soil Detection\nFeature Coming Soon!\nUsing Disease Detection instead.",
+                    Toast.LENGTH_LONG).show();
             Intent soil = new Intent(MainActivity.this, CamActive.class);
             startActivity(soil);
         });

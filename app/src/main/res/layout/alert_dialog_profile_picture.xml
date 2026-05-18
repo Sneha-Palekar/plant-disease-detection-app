@@ -27,7 +27,7 @@
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_marginTop="12dp"
-                android:src="@drawable/ic__671722_camera_icon" />
+                android:src="@drawable/ic__camera" />
 
             <TextView
                 android:layout_width="110dp"

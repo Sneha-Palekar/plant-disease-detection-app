@@ -4,7 +4,11 @@
 
     <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Camera -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
@@ -12,6 +16,10 @@
     <!-- For Android 13+ -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
         tools:targetApi="33" />
+
+    <!-- TensorFlow Lite - Optional, improves performance -->
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <uses-feature android:name="android.software.opengles.deqp.level" android:required="false" />
 
     <!-- Override Firebase minSdk requirement -->
     <uses-sdk
@@ -23,7 +31,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.HomePage"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"> <!-- Add this line for file access -->
+
+        <!-- ✅ ADD FILE PROVIDER HERE (important for camera) -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <!-- LAUNCHER ACTIVITY (Only one should have MAIN/LAUNCHER intent) -->
         <activity
@@ -72,7 +92,8 @@
         <!-- Feature Activities -->
         <activity
             android:name=".CamActive"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- Add this -->
 
         <activity
             android:name=".new_cam_page"
