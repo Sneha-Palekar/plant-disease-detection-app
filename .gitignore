@@ -71,3 +71,25 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 lint/reports/
+
+
+
+# Android Studio IDE files
+.idea/
+*.iml
+.gradle/
+local.properties
+
+# Build outputs
+build/
+app/build/
+*.apk
+*.aab
+
+# Test folders
+androidTest/
+test/
+
+# OS files
+.DS_Store
+Thumbs.db
