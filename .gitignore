@@ -93,3 +93,12 @@ test/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Firebase secrets
+google-services.json
+
+# Build outputs
+app/release/
+release/
+*.apk
+*.aab
